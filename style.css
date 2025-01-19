@@ -3,7 +3,10 @@
     padding: 0;
     font: 1em sans-serif;
     scroll-behavior: smooth;
+    overflow: hidden;
 }
+
+/* Container */
 
 .container {
     width: 100%;
@@ -13,6 +16,8 @@
     flex-direction: row;
     overflow-x: hidden;
 }
+
+/* left - column */
 
 .left-column {
     position: fixed;
@@ -25,8 +30,8 @@
 }
 
 .left-column .image img {
-    width: 300px;
-    height: 300px;
+    width: 280px;
+    height: 280px;
 }
 
 .left-column .name h2 {
@@ -35,17 +40,88 @@
     color: #dadada;
 }
 
+.left-column .search-box {
+    margin-top: 20px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    background: #2a2a2a;
+    padding: 4px 8px 4px 20px;
+    height: 30px;
+    width: 70%;
+}
+
+.left-column .search-box i {
+    color: #666666;
+    font-size: 16px;
+    margin-right: 5px;
+}
+
+.left-column .search-box input {
+    border: none;
+    background: transparent;
+    color: #dadada;
+    outline: none;
+    font-size: 16px;
+}
+
+.left-column .search-list-container {
+    overflow-y: auto;
+    scrollbar-color: #666666 transparent;
+    scrollbar-width: thin;
+    display: block;
+    width: 85%;
+    margin-top: 10px;
+    margin-left: 45px;
+}
+
+.left-column .search-list-container .search-list-item {
+    padding: 5px 10px 5px 16px;
+}
+
+.left-column .search-list-container .search-list-item p {
+    font-size: 17px;
+    color: #dadada;
+    letter-spacing: 1px;
+}
+
+/* right - column */
+
 .right-column {
     margin-left: 25%;
-    min-height: 100vh;
     width: 75%;
     padding: 40px 60px;
     background-color: #000;
+    overflow-y: auto;
+    scrollbar-color: #666666 transparent;
+    scrollbar-width: thin;
 }
+
+.right-column::-webkit-scrollbar {
+    width: 10px;
+}
+
+.right-column::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.right-column::-webkit-scrollbar-thumb {
+    background-color: #666666;
+    border-radius: 20px;
+    border: 3px solid transparent;
+}
+
+.right-column::-webkit-scrollbar-button {
+    display: none;
+}
+
+/* pages */
 
 .right-column .page {
     min-height: 100vh;
-    overflow-y: auto;
+    overflow: hidden;
 }
 
 .right-column .heading h3 {
@@ -114,7 +190,7 @@
 }
 
 .right-column .footer {
-    margin: 20px 0 70px 0;
+    margin: 20px 0 30px 0;
 }
 
 .right-column .footer p {
