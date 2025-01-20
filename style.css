@@ -3,7 +3,6 @@
     padding: 0;
     font: 1em sans-serif;
     scroll-behavior: smooth;
-    overflow: hidden;
 }
 
 /* Container */
@@ -34,6 +33,10 @@
     height: 280px;
 }
 
+.left-column .name {
+    margin-top: -20px;
+}
+
 .left-column .name h2 {
     font-size: 25px;
     font-weight: 700;
@@ -49,8 +52,11 @@
     gap: 5px;
     background: #2a2a2a;
     padding: 4px 8px 4px 20px;
-    height: 30px;
     width: 70%;
+}
+
+.left-column .search-box input {
+    height: 30px;
 }
 
 .left-column .search-box i {
@@ -73,8 +79,18 @@
     scrollbar-width: thin;
     display: block;
     width: 85%;
-    margin-top: 10px;
+    margin: 10px 0 0 45px;
+}
+
+.not-found {
+    display: none;
+    font-size: 17px;
+    color: #dadada;
+    letter-spacing: 1px;
+    margin-top: 20px;
+    width: 75%;
     margin-left: 45px;
+    margin-right: 20px;
 }
 
 .left-column .search-list-container .search-list-item {
@@ -124,86 +140,68 @@
     overflow: hidden;
 }
 
-.right-column .heading h3 {
+.hidden {
+    display: none;
+}
+
+.page .heading h3 {
     color: #dadada;
     font-size: 28px;
     font-weight: 600;
     margin: 30px 0 15px;
 }
 
-.right-column hr {
+.page hr {
     width: 75%;
     color: gray;
 }
 
-.right-column .image img {
+.page .image img {
     margin: 10px 0;
     width: 75%;
     height: 450px;
 }
 
-.right-column .text-content {
+.page .text-content {
     width: 80%;
     margin-bottom: 30px;
 }
 
-.right-column .text-content p {
+.page p {
     font-size: 17px;
     color: #dadada;
     letter-spacing: 1px;
+    line-height: 25px;
+}
+
+.page .text-content p {
     margin: 10px 0;
 }
 
-.right-column .text-content ul li {
+.page .text-content ul {
+    list-style-type: circle;
+}
+
+.page .text-content ul li {
     font-size: 16px;
     color: #dadada;
     letter-spacing: 1px;
     line-height: 28px;
 }
 
-.right-column .text-content li a {
+.page a {
     color: #Ca8a04;
     text-decoration: none;
 }
 
-.right-column .text-content li a:hover {
+.page a:hover {
     text-decoration: underline;
 }
 
-.right-column .images-links p {
-    font-size: 17px;
-    color: #dadada;
-    letter-spacing: 1px;
-}
-
-.right-column .images-links {
+.page .images-links {
     margin: 30px 0;
 }
 
-.right-column .images-links p a {
-    color: #Ca8a04;
-    text-decoration: none;
-}
-
-.right-column .images-links p a:hover {
-    text-decoration: underline;
-}
-
-.right-column .footer {
+.page .footer {
     margin: 20px 0 30px 0;
-}
-
-.right-column .footer p {
-    font-size: 17px;
-    color: #dadada;
-    letter-spacing: 1px;
-}
-
-.right-column .footer p a {
-    color: #Ca8a04;
-    text-decoration: none;
-}
-
-.right-column .footer p a:hover {
-    text-decoration: underline;
 }
