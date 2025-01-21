@@ -45,3 +45,41 @@ searchInput.addEventListener('input', () => {
         notFoundMessage.style.display = 'block';
     }
 });
+
+// Logic for linking pages
+
+document.addEventListener("DOMContentLoaded", function () {
+    const links = document.querySelectorAll(".search-list-item a");
+    const pages = document.querySelectorAll(".page");
+
+    links.forEach(link => {
+        link.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            // Remove 'active' class from all links
+            links.forEach(item => item.parentElement.classList.remove("active"));
+
+            // Add 'active' class to the clicked link
+            this.parentElement.classList.add("active");
+
+            // Hide all pages
+            pages.forEach(page => page.classList.add("hidden"));
+
+            // Show the target page
+            const targetId = this.getAttribute("href").substring(1);
+            const targetPage = document.getElementById(targetId);
+            if (targetPage) {
+                targetPage.classList.remove("hidden");
+            }
+        });
+    });
+});
+
+// Logic to make sure dev diary page is default active
+
+const defaultActive = document.querySelector(".search-list-item.default-active");
+if (defaultActive) {
+    const defaultPageId = defaultActive.querySelector("a").getAttribute("href").substring(1);
+    document.getElementById(defaultPageId)?.classList.remove("hidden");
+    defaultActive.classList.add("active");
+}
