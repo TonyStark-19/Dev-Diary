@@ -97,10 +97,15 @@
     padding: 5px 10px 5px 16px;
 }
 
-.left-column .search-list-container .search-list-item p {
+.left-column .search-list-container .search-list-item a {
     font-size: 17px;
     color: #dadada;
     letter-spacing: 1px;
+    text-decoration: none;
+}
+
+.left-column .search-list-container .search-list-item.active a {
+    color: #a68af9;
 }
 
 /* right - column */
@@ -137,7 +142,6 @@
 
 .right-column .page {
     min-height: 100vh;
-    overflow: hidden;
 }
 
 .hidden {
@@ -179,7 +183,11 @@
 }
 
 .page .text-content ul {
-    list-style-type: circle;
+    list-style-type: disc;
+}
+
+.page .inner-list {
+    margin-left: 40px;
 }
 
 .page .text-content ul li {
@@ -203,5 +211,5 @@
 }
 
 .page .footer {
-    margin: 20px 0 30px 0;
+    margin: 20px 0 20px 0;
 }
