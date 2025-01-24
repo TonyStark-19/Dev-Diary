@@ -34,13 +34,18 @@
 }
 
 .left-column .name {
-    margin-top: -20px;
+    margin-top: -30px;
 }
 
-.left-column .name h2 {
+.left-column .name a {
     font-size: 25px;
     font-weight: 700;
     color: #dadada;
+    text-decoration: none;
+}
+
+.left-column .name a:hover {
+    color: #9c9b9b;
 }
 
 .left-column .search-box {
