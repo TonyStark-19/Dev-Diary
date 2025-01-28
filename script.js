@@ -83,3 +83,9 @@ if (defaultActive) {
     document.getElementById(defaultPageId)?.classList.remove("hidden");
     defaultActive.classList.add("active");
 }
+
+// JavaScript logic to toggle the menu
+document.querySelector('.menu-btn').addEventListener('click', function () {
+    const menu = document.querySelector('.left-column');
+    menu.classList.toggle('active');
+});
