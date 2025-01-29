@@ -89,3 +89,62 @@ document.querySelector('.menu-btn').addEventListener('click', function () {
     const menu = document.querySelector('.left-column');
     menu.classList.toggle('active');
 });
+
+// js logic to add navbar below 790px screen width
+
+function toggleNavbarVisibility() {
+    const navbar = document.querySelector(".navbar");
+
+    if (window.innerWidth <= 790) {
+        navbar.classList.remove("hidden");
+    } else {
+        navbar.classList.add("hidden");
+    }
+}
+
+// Run on page load
+toggleNavbarVisibility();
+
+// Run whenever the window is resized
+window.addEventListener("resize", toggleNavbarVisibility);
+
+// js logic to hide left column when a list item is clicked
+
+// Function to hide the left column when a list item is clicked
+document.querySelectorAll('.search-list-item a').forEach(item => {
+    item.addEventListener('click', function () {
+        const menu = document.querySelector('.left-column');
+        menu.classList.remove('active'); // Hides the left column
+    });
+});
+
+// js logic to move through pages
+
+document.querySelectorAll('.text-content a[href^="#"]').forEach(link => {
+    link.addEventListener('click', function (event) {
+        event.preventDefault(); // Prevent default anchor behavior
+
+        const targetId = this.getAttribute('href').substring(1); // Extract target page ID
+        const targetPage = document.getElementById(targetId);
+        const currentPage = document.querySelector('.page:not(.hidden)'); // Find currently visible page
+
+        if (currentPage) {
+            currentPage.classList.add('hidden'); // Hide current page
+        }
+
+        if (targetPage) {
+            targetPage.classList.remove('hidden'); // Show new page
+        }
+
+        // Update active list item
+        document.querySelectorAll('.search-list-item').forEach(item => {
+            item.classList.remove('active'); // Remove active class from all
+        });
+
+        // Find and activate the corresponding list item for the new page
+        const newActiveItem = document.querySelector(`.search-list-item a[href="#${targetId}"]`);
+        if (newActiveItem) {
+            newActiveItem.parentElement.classList.add('active'); // Add active class
+        }
+    });
+});
