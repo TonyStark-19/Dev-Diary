@@ -21,6 +21,7 @@
 }
 
 .navbar .menu-btn i {
+    user-select: none;
     color: #dadada;
     font-size: 25px;
 }
@@ -31,6 +32,7 @@
 }
 
 .navbar .nav-name a {
+    user-select: none;
     font-size: 22px;
     font-weight: 700;
     color: #dadada;
@@ -136,11 +138,15 @@
     margin-right: 20px;
 }
 
+/* Search items */
+
 .left-column .search-list-container .search-list-item {
+    user-select: none;
     padding: 7px 10px 7px 16px;
 }
 
 .left-column .search-list-container .search-list-item a {
+    user-select: none;
     font-size: 17px;
     color: #dadada;
     letter-spacing: 1px;
@@ -188,9 +194,12 @@
 }
 
 /* Hidden property for all pages */
+
 .hidden {
     display: none;
 }
+
+/* Pages styling */
 
 .page .heading h3 {
     color: #dadada;
@@ -255,6 +264,7 @@
 }
 
 /* Footer for pages */
+
 .page .footer {
     width: 780px;
     margin: 20px 0 20px 0;
@@ -390,6 +400,8 @@
         padding-left: 40px;
     }
 }
+
+/* Toggle and navbar activates here */
 
 @media (max-width: 790px) {
 
