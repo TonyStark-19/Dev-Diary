@@ -1,6 +1,6 @@
 # Dev Diary 📖  
 
-<img src="images/diary.jpg" alt="Dev Diary" width="800" height="500">  
+![Dev Diary](images/diary.jpg)  
 
 ## What is Dev Diary?  
 **Personal bits of learning, open for everyone.** 🚀  
