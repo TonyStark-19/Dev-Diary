@@ -97,6 +97,8 @@
     display: flex;
     align-items: center;
     user-select: none;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .theme-toggle input[type="checkbox"] {
