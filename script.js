@@ -148,3 +148,33 @@ document.querySelectorAll('.text-content a[href^="#"]').forEach(link => {
         }
     });
 });
+
+// js logic to toggle theme btn1 (in navbar)
+
+var currentTheme = 'light';
+
+document.querySelector('.theme-toggle-btn').addEventListener('click', function () {
+    const menu = document.querySelector('.container');
+    if (currentTheme == 'light') {
+        menu.classList.remove("light");
+        currentTheme = 'dark';
+    } else {
+        menu.classList.add("light");
+        currentTheme = 'light';
+    }
+});
+
+// js logic to toggle theme btn 2 (in left column)
+
+var currentTheme = 'light';
+
+document.querySelector('.theme-toggle-btn-2').addEventListener('click', function () {
+    const menu = document.querySelector('.container');
+    if (currentTheme == 'light') {
+        menu.classList.remove("light");
+        currentTheme = 'dark';
+    } else {
+        menu.classList.add("light");
+        currentTheme = 'light';
+    }
+});
