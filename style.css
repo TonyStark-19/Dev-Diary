@@ -31,7 +31,7 @@
     width: 50px;
 }
 
-.navbar .nav-name a {
+.navbar #nav-name a {
     user-select: none;
     font-size: 22px;
     font-weight: 700;
@@ -52,7 +52,7 @@
     background-color: #fff;
 }
 
-.container.light .nav-name a {
+.container.light #nav-name a {
     color: #222222;
 }
 
@@ -92,6 +92,8 @@
     gap: 20px;
     align-items: center;
 }
+
+/* theme toggle button */
 
 .theme-toggle {
     display: flex;
@@ -133,8 +135,10 @@
 }
 
 .theme-toggle input:checked[type="checkbox"]::before {
-    left: 19px;
+    left: 18px;
 }
+
+/* left - column */
 
 .left-column .name {
     outline: none;
@@ -166,6 +170,7 @@
     background: #2a2a2a;
     padding: 4px 8px 4px 20px;
     width: 70%;
+    border: 1px solid #676363;
 }
 
 .left-column .search-box input {
@@ -196,6 +201,7 @@
 }
 
 /*  Not found message */
+
 .not-found {
     display: none;
     font-size: 17px;
@@ -205,6 +211,11 @@
     width: 75%;
     margin-left: 30px;
     margin-right: 20px;
+}
+
+.not-found img {
+    width: 200px;
+    height: 200px;
 }
 
 /* Search items */
@@ -247,7 +258,7 @@
 
 .container.light .left-column .search-box {
     background: #fff;
-    border: 1px solid #e0e0e0;
+    border: 2px solid #e0e0e0;
     color: #aeaeae;
 }
 
@@ -590,6 +601,12 @@ hr {
     .page .heading h3 {
         margin-top: 60px;
     }
+
+    .not-found img {
+        width: 500px;
+        height: 500px;
+        margin-top: -20px;
+    }
 }
 
 @media (max-width: 770px) {
@@ -671,6 +688,10 @@ hr {
     .page .footer {
         width: 560px;
     }
+
+    .not-found img {
+        margin-left: -30px;
+    }
 }
 
 @media (max-width: 620px) {
@@ -709,6 +730,12 @@ hr {
     .page .footer {
         width: 480px;
     }
+
+    .not-found img {
+        height: 450px;
+        width: 450px;
+        margin: 0 0 0 -40px;
+    }
 }
 
 @media (max-width: 540px) {
@@ -746,6 +773,10 @@ hr {
     .page .inner-list {
         margin-left: 30px;
     }
+
+    .not-found img {
+        margin-left: -60px;
+    }
 }
 
 @media (max-width: 460px) {
@@ -770,6 +801,12 @@ hr {
     .page .footer {
         width: 360px;
     }
+
+    .not-found img {
+        width: 400px;
+        height: 400px;
+        margin-top: 20px;
+    }
 }
 
 @media (max-width: 420px) {
@@ -791,6 +828,12 @@ hr {
     .page .inner-list {
         margin-left: 20px;
     }
+
+    .not-found img {
+        width: 350px;
+        height: 350px;
+        margin-left: -40px;
+    }
 }
 
 @media (max-width: 380px) {
@@ -806,6 +849,10 @@ hr {
     .page .text-content,
     .page .footer {
         width: 280px;
+    }
+
+    .not-found img {
+        margin-left: -50px;
     }
 }
 
@@ -830,6 +877,12 @@ hr {
 
     .page .inner-list {
         margin-left: 0;
+    }
+
+    .not-found img {
+        width: 300px;
+        height: 300px;
+        margin: 0 0 0 -40px;
     }
 }
 
