@@ -51,6 +51,7 @@ searchInput.addEventListener('input', () => {
 document.addEventListener("DOMContentLoaded", function () {
     const links = document.querySelectorAll(".search-list-item a");
     const pages = document.querySelectorAll(".page");
+    const rightColumn = document.querySelector('.right-column'); // Select the scrollable right column
 
     links.forEach(link => {
         link.addEventListener("click", function (e) {
@@ -70,6 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const targetPage = document.getElementById(targetId);
             if (targetPage) {
                 targetPage.classList.remove("hidden");
+                rightColumn.scrollTo(0, 0); // Scroll right column to top
             }
         });
     });
@@ -127,6 +129,7 @@ document.querySelectorAll('.text-content a[href^="#"]').forEach(link => {
         const targetId = this.getAttribute('href').substring(1); // Extract target page ID
         const targetPage = document.getElementById(targetId);
         const currentPage = document.querySelector('.page:not(.hidden)'); // Find currently visible page
+        const rightColumn = document.querySelector('.right-column'); // Select the scrollable right column
 
         if (currentPage) {
             currentPage.classList.add('hidden'); // Hide current page
@@ -134,6 +137,7 @@ document.querySelectorAll('.text-content a[href^="#"]').forEach(link => {
 
         if (targetPage) {
             targetPage.classList.remove('hidden'); // Show new page
+            rightColumn.scrollTo(0, 0); // Scroll right column to top
         }
 
         // Update active list item
@@ -177,4 +181,37 @@ document.querySelector('.theme-toggle-btn-2').addEventListener('click', function
         menu.classList.add("light");
         currentTheme = 'light';
     }
+});
+
+// Js logic to make name link functionable
+
+document.querySelectorAll('.name a').forEach(link => {
+    link.addEventListener('click', function (event) {
+        event.preventDefault(); // Prevent default anchor behavior
+
+        const targetId = this.getAttribute('href').substring(1); // Extract target page ID
+        const targetPage = document.getElementById(targetId);
+        const currentPage = document.querySelector('.page:not(.hidden)'); // Find currently visible page
+        const rightColumn = document.querySelector('.right-column'); // Select the scrollable right column
+
+        if (currentPage) {
+            currentPage.classList.add('hidden'); // Hide current page
+        }
+
+        if (targetPage) {
+            targetPage.classList.remove('hidden'); // Show new page
+            rightColumn.scrollTo(0, 0); // Scroll right column to top
+        }
+
+        // Update active list item
+        document.querySelectorAll('.search-list-item').forEach(item => {
+            item.classList.remove('active'); // Remove active class from all
+        });
+
+        // Find and activate the corresponding list item for the new page
+        const newActiveItem = document.querySelector(`.search-list-item a[href="#${targetId}"]`);
+        if (newActiveItem) {
+            newActiveItem.parentElement.classList.add('active'); // Add active class
+        }
+    });
 });
