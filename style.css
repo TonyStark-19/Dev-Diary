@@ -1,9 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-
 * {
     margin: 0;
     padding: 0;
-    font-family: "Poppins", sans-serif;
+    font: 1em sans-serif;
     scroll-behavior: smooth;
 }
 
@@ -885,15 +883,7 @@ footer {
     }
 }
 
-@media (max-width: 385px) {
-
-    .navbar #nav-name a {
-        font-size: 17px;
-    }
-
-    .page .heading h3 {
-        font-size: 24px;
-    }
+@media (max-width: 380px) {
 
     .page hr {
         width: 280px;
@@ -910,13 +900,6 @@ footer {
 
     .not-found img {
         margin-left: -50px;
-    }
-}
-
-@media (max-width: 350px) {
-
-    .page .heading h3 {
-        font-size: 21px;
     }
 }
 
