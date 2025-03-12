@@ -35,7 +35,7 @@ Welcome to my **Dev Diary!** This is my personal documentation of my coding jour
 ---
 
 ## 📣 **Connect with Me!**  
-- Want to chat or collaborate? **[Check out my portfolio](https://tonystark-19.github.io/Portfolio-Website/)**.  
+- Want to chat or collaborate? **[Check out my portfolio](https://adityadev-tau.vercel.app/)**.  
 - Share your thoughts, feedback, or just say hi! 😊  
 
 ---
